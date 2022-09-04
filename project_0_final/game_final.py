@@ -23,6 +23,7 @@ def random_predict(number) -> int:
             break # конец игры и выход из цикла
     return(count)
 # print(f'Количество попыток: {random_predict(number)}')
+
 def score_game(random_predict) -> int:
     """ За какое количество попыток в среднем за 1000 подходов угадывает наш алгоритм
     Args:
@@ -38,5 +39,7 @@ def score_game(random_predict) -> int:
     score = int(np.mean(count_ls))
     print(f"Ваш алгоритм угадывает число в среднем за: {score} попытки")
 
-score_game(random_predict)
+#RUN
+if __name__ == '__main__':
+    score_game(random_predict)
 
